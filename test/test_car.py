@@ -22,7 +22,7 @@ class TestCalliope(unittest.TestCase):
 
         factory = CarFactory()
         car = factory.create_calliope(current_date, last_service_date, current_mileage, last_service_mileage)
-        self.assertTrue(car.needs_service())
+        self.assertFalse(car.needs_service())
 
     def test_engine_should_be_serviced(self):
         current_date = datetime.today().date()
@@ -42,7 +42,7 @@ class TestCalliope(unittest.TestCase):
 
         factory = CarFactory()
         car = factory.create_calliope(current_date, last_service_date, current_mileage, last_service_mileage)
-        self.assertTrue(car.needs_service())
+        self.assertFalse(car.needs_service())
 
 
 class TestGlissade(unittest.TestCase):
@@ -64,7 +64,7 @@ class TestGlissade(unittest.TestCase):
 
         factory = CarFactory()
         car = factory.create_glissade(current_date, last_service_date, current_mileage, last_service_mileage)
-        self.assertTrue(car.needs_service())
+        self.assertFalse(car.needs_service())
 
     def test_engine_should_be_serviced(self):
         current_date = datetime.today().date()
@@ -84,7 +84,7 @@ class TestGlissade(unittest.TestCase):
 
         factory = CarFactory()
         car = factory.create_glissade(current_date, last_service_date, current_mileage, last_service_mileage)
-        self.assertTrue(car.needs_service())
+        self.assertFalse(car.needs_service())
 
 
 class TestPalindrome(unittest.TestCase):
@@ -104,7 +104,7 @@ class TestPalindrome(unittest.TestCase):
 
         factory = CarFactory()
         car = factory.create_palindrome(current_date, last_service_date, current_mileage, last_service_mileage)
-        self.assertTrue(car.needs_service())
+        self.assertFalse(car.needs_service())
 
     def test_engine_should_be_serviced(self):
         current_date = datetime.today().date()
@@ -122,7 +122,7 @@ class TestPalindrome(unittest.TestCase):
 
         factory = CarFactory()
         car = factory.create_palindrome(current_date, last_service_date, current_mileage, last_service_mileage)
-        self.assertTrue(car.needs_service())
+        self.assertFalse(car.needs_service())
 
 class TestRorschach(unittest.TestCase):
     def test_battery_should_be_serviced(self):
@@ -143,7 +143,7 @@ class TestRorschach(unittest.TestCase):
 
         factory = CarFactory()
         car = factory.create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage)
-        self.assertTrue(car.needs_service())
+        self.assertFalse(car.needs_service())
 
     def test_engine_should_be_serviced(self):
         current_date = datetime.today().date()
@@ -163,7 +163,7 @@ class TestRorschach(unittest.TestCase):
 
         factory = CarFactory()
         car = factory.create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage)
-        self.assertTrue(car.needs_service())
+        self.assertFalse(car.needs_service())
 
 class TestThovex(unittest.TestCase):
     def test_battery_should_be_serviced(self):
@@ -184,7 +184,7 @@ class TestThovex(unittest.TestCase):
 
         factory = CarFactory()
         car = factory.create_thovex(current_date, last_service_date, current_mileage, last_service_mileage)
-        self.assertTrue(car.needs_service())
+        self.assertFalse(car.needs_service())
 
     def test_engine_should_be_serviced(self):
         current_date = datetime.today().date()
@@ -204,7 +204,7 @@ class TestThovex(unittest.TestCase):
 
         factory = CarFactory()
         car = factory.create_thovex(current_date, last_service_date, current_mileage, last_service_mileage)
-        self.assertTrue(car.needs_service())
+        self.assertFalse(car.needs_service())
 
 if __name__ == '__main__':
     unittest.main()
